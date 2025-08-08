@@ -1,12 +1,16 @@
 <?php
 
-use App\Http\Controllers\JobController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [IndexController::class, 'index'   ]);
 Route::get(
-    "/jobs",
-    [JobController::class, 'index']
+    "/about",
+    [AboutController::class, 'about']
+);
+Route::get(
+    "/contact",
+    [ContactController::class, 'contact']
 );

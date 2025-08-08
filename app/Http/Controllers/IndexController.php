@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Job;
 use Illuminate\Http\Request;
 
-class JobController extends Controller
+class IndexController extends Controller
 {
     function index()
     {
         $jobs = Job::all();
-        return view('job/index', ['jobss' => $jobs]);
+        return view('job/index', ["pageT" => "Home"]);
     }
 }

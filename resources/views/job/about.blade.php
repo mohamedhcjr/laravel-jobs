@@ -1,3 +1,3 @@
 <x-layout :title="$pageT">
-    <h2>home </h2>
+    <h2>about</h2>
 </x-layout>
